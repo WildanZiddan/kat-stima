@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.left {
+    flex: .8;
+    font-weight: 500;
+    background-image: url(../img/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    padding: 9% 4%;
+    width: 100%;
+    font-family: 'EB Garamond', sans-serif;
+}
+
+.title {
+    font-size: 6.5vh;
+}
+
+.detail {
+    font-size: 2.5vh;
+}
+
+.right {
+    display: flex;
+    flex: 1.2;
+    padding: 1%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+}
+
+.right-container {
+    padding: 1% 0;
+    width: 60%;
+    height: 65vh;
+}
+
+.login-text h1 {
+    font-weight: 600;
+}
+
+.login-detail {
+    margin-top: 3%;
+    font-weight: 500;
+}
+
+.login-form {
+    font-weight: 500;
+    margin-top: 20%;
+}
+
+.login-detail a {
+    text-decoration: none;
+    color: #101010;
+    transition: all .5s;
+}
+
+.login-detail a:hover {
+    color: #967E76;
+}
+
+.isi-form {
+    margin-bottom: 5%;
+}
+
+input[type=email], [type=text] {
+    border: 2px solid #101010;
+    padding: 1.5% 1%;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 500;
+}
+input[type=email], [type=text]:focus {
+    outline: none;
+}
+
+input[type=password] {
+    border: 2px solid #101010;
+    padding: 1.5% 1%;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 500;
+}
+input[type=password]:focus {
+    outline: none;
+}
+
+.akhir-form {
+    text-align: center;
+}
+
+.akhir-form a{
+    color: #101010;
+    text-decoration: none;
+}
+
+.akhir-form a:hover {
+    color: #967E76;
+}
+
+input[type=button] {
+    background-color: #967E76;
+    color: white;
+    border: none;
+    padding: 1.5%;
+    width: 100%;
+    margin-top: 2%;
+    transition: all .5s;
+}
+
+input[type=button]:hover {
+    background-color: #101010;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="CSS/login.css">
+    <script src="JS/login.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1 class="title">Welcome to Katástima</h1>
+            <p class="detail">A modern shop with Old Greek design.</p>
+        </div>
+        <div class="right">
+            <div class="right-container">
+                <div class="login-text">
+                    <h1>Sign In to continue</h1>
+                </div>
+                <div class="login-detail">
+                    <p>Don't have an account? <br> <a href="signup.html"> Create an account</a></p>
+                </div>
+                
+                <form class="login-form" action="POST">
+                    <div class="isi-form">
+                        <p>Email</p>
+                        <input type="email"> 
+                    </div>
+                    <div class="isi-form">
+                        <p>Password</p>
+                        <input type="password">
+                    </div>
+                    
+                    <div class="akhir-form">
+                        <a href="#">Forgot password?</a> <br>
+                        <input type="button" onclick="tombolMasuk()" value="Sign In">
+                    </div>
+                    
+                </form>
+            </div>
+        </div>    
+    </div>
+</body>
+</html>

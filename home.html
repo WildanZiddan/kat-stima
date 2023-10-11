@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="CSS/home.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./JS/home.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+  <div>
+    <nav>
+    <div class="navbar">
+      <div class="navbar__wrapper">
+        <nav class="navbar__menu"><a class="navbar__brand" href="#">
+            <img src="./img/logo.png" alt="" /> Katástima</a>
+          <div id="nav-icon3">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="navbar__nav">
+            <li class="navbar__link after-transform"><a href="#cart"><i class='bx bx-cart-alt'></i></a></li>
+            <li class="navbar__link after-transform"><a href="#notification"><i class='bx bx-bell' ></i></a></li>
+            <li class="navbar__link after-transform"><a href="#mail"><i class='bx bx-envelope' ></i></a></li>
+            <li class="navbar__link after-transform"><a href="#profile"><i class='bx bx-user' ></i></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="nav_r">
+      <ul class="nav_r__nav">
+        <li class="navbar-responsive__link after-transform"><a href="#cart"><i class='bx bx-cart-alt'> Cart</i></a></li>
+        <li class="navbar-responsive__link after-transform"><a href="#notification"><i class='bx bx-bell' > Notification</i></a></li>
+        <li class="navbar-responsive__link after-transform"><a href="#mail"><i class='bx bx-envelope' > Mail</i></a></li>
+        <li class="navbar-responsive__link after-transform"><a href="#profile"><i class='bx bx-user' > Profile</i></a></li>
+      </ul>
+    </div>
+  </nav>
+  </div>
+  
+
+    <div class="news" aria-label="Gallery">
+      <div class="carousel">
+        <ol class="carousel__viewport">
+          <li id="carousel__slide1"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper">
+              <a href="#carousel__slide4"
+                 class="carousel__prev">Go to last slide</a>
+              <a href="#carousel__slide2"
+                 class="carousel__next">Go to next slide</a>
+            </div>
+          </li>
+          <li id="carousel__slide2"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide1"
+               class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide3"
+               class="carousel__next">Go to next slide</a>
+          </li>
+          <li id="carousel__slide3"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide2"
+               class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide4"
+               class="carousel__next">Go to next slide</a>
+          </li>
+          <li id="carousel__slide4"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide3"
+               class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide1"
+               class="carousel__next">Go to first slide</a>
+          </li>
+        </ol>
+        <aside class="carousel__navigation">
+          <ol class="carousel__navigation-list">
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide1" class="carousel__navigation-button">Go to slide 1</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide2" class="carousel__navigation-button">Go to slide 2</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide3" class="carousel__navigation-button">Go to slide 3</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide4" class="carousel__navigation-button">Go to slide 4</a>
+            </li>
+          </ol>
+        </aside>
+      </div>  
+    </div>
+
+    <div class="main-container-category">
+      <h2>Category</h2>
+      <div class="container-category">
+        <a href="" class="box-category">
+          <div class="isi-category">
+            <div class="gambar-category"></div>
+            <div class="teks-category">Sepatu</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+</body>
+</html>
