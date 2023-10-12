@@ -290,7 +290,6 @@ body{
     left: 0;
   }
 }
-
 @keyframes tostart {
   75% {
     left: 0;
@@ -305,7 +304,6 @@ body{
     left: 0;
   }
 }
-
 @keyframes snap {
   96% {
     scroll-snap-align: center;
@@ -320,13 +318,11 @@ body{
     scroll-snap-align: center;
   }
 }
-
 ol, li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
 .carousel {
   position: relative;
   padding-top: 30%;
@@ -336,7 +332,6 @@ ol, li {
   width: 85%;
   z-index: -1;
 }
-
 .carousel__viewport {
   position: absolute;
   top: 30%;
@@ -350,7 +345,6 @@ ol, li {
   overflow-y: hidden;
   box-shadow: 10px black;
 }
-
 .carousel__slide {
   position: relative;
   flex: 0 0 100%;
@@ -364,21 +358,18 @@ ol, li {
   background-size: cover;
   border-radius: 25px;
 }
-
 #carousel__slide2 {
   background-image: url(../img/Slide2.png);
   background-position: center;
   background-size: cover;
   border-radius: 25px;
 }
-
 #carousel__slide3 {
   background-image: url(../img/Slide3.png);
   background-position: center;
   background-size: cover;
   border-radius: 25px;
 }
-
 #carousel__slide4 {
   background-image: url(../img/Slide4.png);
   background-position: center;
@@ -394,7 +385,6 @@ ol, li {
   height: 100%;
   scroll-snap-align: center;
 }
-
 @media (hover: hover) {
   .carousel__snapper {
     animation-name: tonext, snap;
@@ -407,17 +397,14 @@ ol, li {
     animation-name: tostart, snap;
   }
 }
-
 @media (prefers-reduced-motion: reduce) {
   .carousel__snapper {
     animation-name: none;
   }
 }
-
 .carousel:hover .carousel__snapper, .carousel:focus-within .carousel__snapper {
   animation-name: none;
 }
-
 .carousel__navigation {
   position: absolute;
   top: 97%;
@@ -426,11 +413,9 @@ ol, li {
   left: 0;
   text-align: center;
 }
-
 .carousel__navigation-list, .carousel__navigation-item {
   display: inline-block;
 }
-
 .carousel__navigation-button {
   display: inline-block;
   width: 1.3rem;
@@ -442,11 +427,9 @@ ol, li {
   font-size: 0;
   transition: transform 0.3s ease-in-out;
 }
-
 .carousel__navigation-button.active {
   background-color: #D7C0AE !important; /* Change this to the desired active color */
 }
-
 .carousel::before, .carousel::after, .carousel__prev, .carousel__next {
   position: absolute;
   top: 0;
@@ -458,18 +441,45 @@ ol, li {
   font-size: 0;
   outline: 0;
 }
-
 .carousel::before, .carousel__prev {
   left: -1rem;
 }
-
 .carousel::after, .carousel__next {
   right: -1rem;
 }
 
+/*-----------------------------------*\
+  .CATEGORY
+\*-----------------------------------*/
 .main-container-category {
   width: 90%;
-  height: 15vh;
-  margin: 4vh auto;
-  background-color: #333;
+  height: 20vh;
+  margin: 10vh auto;
+}
+.container-category {
+  display: flex;
+  width: 98%;
+  height: 14vh;
+  margin: 0 auto;
+}
+
+.box-category {
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+}
+
+.isi-category {
+  height: 100%;
+  margin: 0 5vh;
+  padding: 10% 0;
+  width: 10vh;
+}
+
+.gambar-category img{
+  width: 65px;
+  height: 65px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
