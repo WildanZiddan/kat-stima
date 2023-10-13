@@ -61,8 +61,7 @@ body{
   list-style: none;
 }
 
-.navbar__link a,
-.navbar__brand {
+.navbar__link a, .navbar__brand {
   display: block;
   position: relative;
   padding: 25px 12px 12px;
@@ -94,6 +93,7 @@ body{
   content: "";
   transition: all .3s ease;
   position: absolute;
+  cursor: pointer;
   bottom: 2px;
   left: 0;
   height: 2px;
@@ -104,8 +104,7 @@ body{
   transform-origin: bottom center;
 }
 
-.after-transform a.active:after,
-.after-transform a:hover:after {
+.after-transform a.active:after, .after-transform a:hover:after {
   transform: scaleX(1) translateZ(0);
 }
 
@@ -456,6 +455,11 @@ ol, li {
   height: 20vh;
   margin: 10vh auto;
 }
+
+.main-container-category h2{
+  margin-left: 7vh;
+}
+
 .container-category {
   display: flex;
   width: 98%;

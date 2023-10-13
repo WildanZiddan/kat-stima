@@ -26,7 +26,7 @@ $(document).ready(function () {
 
 let currentSlide = 1;
   const totalSlides = 4; // Update this to the total number of slides
-  const slideDuration = 2500; // 3 seconds
+  const slideDuration = 3500; // 3 seconds
 
   function goToNextSlide() {
     currentSlide = (currentSlide % totalSlides) + 1;
