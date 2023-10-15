@@ -24,35 +24,37 @@ $(document).ready(function () {
   });
 });
 
-let currentSlide = 1;
-  const totalSlides = 4; // Update this to the total number of slides
-  const slideDuration = 3500; // 3 seconds
+var slideIndex = 1;
+document.addEventListener("DOMContentLoaded", function() {
+  showSlides(slideIndex);
+});
 
-  function goToNextSlide() {
-    currentSlide = (currentSlide % totalSlides) + 1;
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-    // Remove the 'active' class from all navigation buttons
-    const navigationButtons = document.querySelectorAll('.carousel__navigation-button');
-    navigationButtons.forEach(button => {
-      button.classList.remove('active');
-    });
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-    // Add the 'active' class to the current navigation button
-    const currentButton = document.querySelector(`.carousel__navigation-button[href="#carousel__slide${currentSlide}"]`);
-    currentButton.classList.add('active');
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slides");
+  var dots = document.getElementsByClassName("slide-thumbnail");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  console.log(slideIndex);
 
-    location.href = `#carousel__slide${currentSlide}`;
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      // slides[i].style.display = "inline";
   }
-
-  // Start the auto-advance
-  const autoAdvanceInterval = setInterval(goToNextSlide, slideDuration);
-
-  // Clear the interval when user interacts with the carousel
-  document.querySelector('.carousel__viewport').addEventListener('mouseover', () => {
-    clearInterval(autoAdvanceInterval);
-  });
-
-  // Resume auto-advance when the user is not interacting with the carousel
-  document.querySelector('.carousel__viewport').addEventListener('mouseout', () => {
-    autoAdvanceInterval = setInterval(goToNextSlide, slideDuration);
-  });
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  // slides[slideIndex-1].style.display = "inline";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex - 1].alt;
+}

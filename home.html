@@ -44,67 +44,41 @@
   </nav>
   </div>
   
-
-    <div class="news" aria-label="Gallery">
-      <div class="carousel">
-        <ol class="carousel__viewport">
-          <li id="carousel__slide1"
-              tabindex="0"
-              class="carousel__slide">
-            <div class="carousel__snapper">
-              <a href="#carousel__slide4"
-                 class="carousel__prev">Go to last slide</a>
-              <a href="#carousel__slide2"
-                 class="carousel__next">Go to next slide</a>
+    <!---------- NEWS ---------->
+    <section id="portfolio" class="portfolio">
+      <div class="container-project">
+          <div class="holder">
+            <div class="slides">
+              <img src="./img/Slide1.png" alt="" />
             </div>
-          </li>
-          <li id="carousel__slide2"
-              tabindex="0"
-              class="carousel__slide">
-            <div class="carousel__snapper"></div>
-            <a href="#carousel__slide1"
-               class="carousel__prev">Go to previous slide</a>
-            <a href="#carousel__slide3"
-               class="carousel__next">Go to next slide</a>
-          </li>
-          <li id="carousel__slide3"
-              tabindex="0"
-              class="carousel__slide">
-            <div class="carousel__snapper"></div>
-            <a href="#carousel__slide2"
-               class="carousel__prev">Go to previous slide</a>
-            <a href="#carousel__slide4"
-               class="carousel__next">Go to next slide</a>
-          </li>
-          <li id="carousel__slide4"
-              tabindex="0"
-              class="carousel__slide">
-            <div class="carousel__snapper"></div>
-            <a href="#carousel__slide3"
-               class="carousel__prev">Go to previous slide</a>
-            <a href="#carousel__slide1"
-               class="carousel__next">Go to first slide</a>
-          </li>
-        </ol>
-        <aside class="carousel__navigation">
-          <ol class="carousel__navigation-list">
-            <li class="carousel__navigation-item">
-              <a href="#carousel__slide1" class="carousel__navigation-button">Go to slide 1</a>
-            </li>
-            <li class="carousel__navigation-item">
-              <a href="#carousel__slide2" class="carousel__navigation-button">Go to slide 2</a>
-            </li>
-            <li class="carousel__navigation-item">
-              <a href="#carousel__slide3" class="carousel__navigation-button">Go to slide 3</a>
-            </li>
-            <li class="carousel__navigation-item">
-              <a href="#carousel__slide4" class="carousel__navigation-button">Go to slide 4</a>
-            </li>
-          </ol>
-        </aside>
-      </div>  
-    </div>
+        
+            <div class="slides">
+              <img src="./img/Slide2.png">
+            </div>
+        
+            <div class="slides">
+              <img src="./img/Slide3.png">
+            </div>
+              
+            <div class="slides">
+              <img src="./img/Slide4.png">
+            </div>
+          </div>
+        
+          <div class="prevContainer"><a class="prev" onclick="plusSlides(-1)">
+            <svg viewBox="0 0 24 24">
+            <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+        </svg>
+            </a></div>
+          <div class="nextContainer"><a class="next" onclick="plusSlides(1)">
+            <svg viewBox="0 0 24 24">
+          <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+        </svg>
+            </a></div>
+        </div>
+  </section>
 
+    <!---------- CATEGORY ---------->
     <div class="main-container-category">
       <h2>Category</h2>
       <div class="container-category">
@@ -159,5 +133,20 @@
       </div>
     </div>
     
+    <!---------- RECOMMENDATION ---------->
+    <div class="main-container-rekomen">
+      <div class="title-rekomen">
+        <h2>RECOMMENDATION</h2>
+      </div>
+      <div class="container-rekomen">
+        <a href="" class="box-rekomen">
+          <div class="isi-rekomen">
+            <div class="gambar-rekomen"><img src="./img/cloth.jpeg" alt=""></div>
+            <div class="teks-rekomen">Pakaian</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
 </body>
 </html>

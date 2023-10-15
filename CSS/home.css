@@ -73,16 +73,15 @@ body{
 .navbar__brand {
   transition: 0.5s;
   text-shadow: 0 4px 2px rgba(0, 0, 0, 0.2);
-  height: 120px;
+  height: 65px;
   display: flex;
   flex-direction: row;
   left: -30px;
-  margin-top: 4%;
 }
 
 .navbar__brand img {
-  height: 50%;
-  margin-top: -.8rem;
+  height: 100%;
+  margin-top: -.5rem;
 }
 
 .after-transform a {
@@ -275,176 +274,75 @@ body{
 /*-----------------------------------*\
   .NEWS
 \*-----------------------------------*/
-@keyframes tonext {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: 100%;
-  }
-  98% {
-    left: 100%;
-  }
-  99% {
-    left: 0;
-  }
-}
-@keyframes tostart {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: -300%;
-  }
-  98% {
-    left: -300%;
-  }
-  99% {
-    left: 0;
-  }
-}
-@keyframes snap {
-  96% {
-    scroll-snap-align: center;
-  }
-  97% {
-    scroll-snap-align: none;
-  }
-  99% {
-    scroll-snap-align: none;
-  }
-  100% {
-    scroll-snap-align: center;
-  }
-}
-ol, li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.carousel {
-  position: relative;
-  padding-top: 30%;
-  filter: drop-shadow(0 0 10px #0003);
-  perspective: 100px;
-  height: 100%;
-  width: 85%;
-  z-index: -1;
-}
-.carousel__viewport {
-  position: absolute;
-  top: 30%;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.portfolio {
   display: flex;
-  overflow-x: scroll;
-  counter-reset: item;
-  scroll-behavior: smooth;
-  overflow-y: hidden;
-  box-shadow: 10px black;
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+  padding: 3% 0 0;
+  font-family: 'Poppins', sans-serif;
+  height: 65vh;
+  margin-bottom: -100px;
 }
-.carousel__slide {
+
+.container-project img {
+  vertical-align: middle;
+}
+.container-project {
   position: relative;
-  flex: 0 0 100%;
+  margin: auto;
+  padding: 0 8%;
+}  
+.holder::-webkit-scrollbar {
+  display: none;
+}
+.slides {
+  display: none;
+}
+.slides img {
   width: 100%;
-  counter-increment: item;
 }
-
-#carousel__slide1 {
-  background-image: url(../img/Slide1.png);
-  background-position: center;
-  background-size: cover;
-  border-radius: 25px;
-}
-#carousel__slide2 {
-  background-image: url(../img/Slide2.png);
-  background-position: center;
-  background-size: cover;
-  border-radius: 25px;
-}
-#carousel__slide3 {
-  background-image: url(../img/Slide3.png);
-  background-position: center;
-  background-size: cover;
-  border-radius: 25px;
-}
-#carousel__slide4 {
-  background-image: url(../img/Slide4.png);
-  background-position: center;
-  background-size: cover;
-  border-radius: 25px;
-}
-
-.carousel__snapper {
+.prevContainer,  .nextContainer {
+  background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
-  top: 0;
+  top: 65%;
+  transform: translate(0, calc(-50% - 54px));
+  height: 34px;
+  width: 34px;
+  cursor: pointer;
+}
+.prevContainer {
+  margin-left: 105px;
   left: 0;
-  width: 100%;
-  height: 100%;
-  scroll-snap-align: center;
+  border-radius: 30px;
+  z-index: 3;
 }
-@media (hover: hover) {
-  .carousel__snapper {
-    animation-name: tonext, snap;
-    animation-timing-function: ease;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-  }
-
-  .carousel__slide:last-child .carousel__snapper {
-    animation-name: tostart, snap;
-  }
+.prev {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 24px;
+  width: 22px;
+  float: left;
+  margin-left: 6px;
 }
-@media (prefers-reduced-motion: reduce) {
-  .carousel__snapper {
-    animation-name: none;
-  }
+.prev svg, .next svg {
+  fill: white;
 }
-.carousel:hover .carousel__snapper, .carousel:focus-within .carousel__snapper {
-  animation-name: none;
-}
-.carousel__navigation {
-  position: absolute;
-  top: 97%;
+.nextContainer {
+  margin-right: 105px;
   right: 0;
-  bottom: 0;
-  left: 0;
-  text-align: center;
+  border-radius: 30px;
+  z-index: 3;
 }
-.carousel__navigation-list, .carousel__navigation-item {
-  display: inline-block;
-}
-.carousel__navigation-button {
-  display: inline-block;
-  width: 1.3rem;
-  height: 1.3rem;
-  background-color: #333;
-  background-clip: content-box;
-  border: 0.25rem solid transparent;
-  border-radius: 50%;
-  font-size: 0;
-  transition: transform 0.3s ease-in-out;
-}
-.carousel__navigation-button.active {
-  background-color: #D7C0AE !important; /* Change this to the desired active color */
-}
-.carousel::before, .carousel::after, .carousel__prev, .carousel__next {
-  position: absolute;
-  top: 0;
-  margin-top: 4.5%;
-  width: 4rem;
-  height: 4rem;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  font-size: 0;
-  outline: 0;
-}
-.carousel::before, .carousel__prev {
-  left: -1rem;
-}
-.carousel::after, .carousel__next {
-  right: -1rem;
+.next {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 24px;
+  width: 22px;
+  float: right;
+  margin-right: 6px;
 }
 
 /*-----------------------------------*\
@@ -457,12 +355,12 @@ ol, li {
 }
 
 .main-container-category h2{
-  margin-left: 7vh;
+  margin-left: 6vh;
 }
 
 .container-category {
   display: flex;
-  width: 98%;
+  width: 100%;
   height: 14vh;
   margin: 0 auto;
 }
@@ -476,12 +374,63 @@ ol, li {
 
 .isi-category {
   height: 100%;
-  margin: 0 5vh;
+  padding: 0 2vh;
+  margin: 0;
   padding: 10% 0;
   width: 10vh;
 }
 
 .gambar-category img{
+  width: 65px;
+  height: 65px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+/*-----------------------------------*\
+  .REKOMEN
+\*-----------------------------------*/
+.main-container-rekomen {
+  width: 83.5%;
+  height: 100vh;
+  margin: 10vh auto;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: #f5f3f3;
+}
+
+.title-rekomen {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  text-align: center;
+  background-color: white;
+}
+
+.container-rekomen {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 50px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.box-rekomen {
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+  background-color: white;
+  font-weight: 500;
+  height: 12vh;
+}
+
+.isi-rekomen {
+  height: 100%;
+  padding: 0 2vh;
+  margin: 0;
+  padding: 10% 0;
+  width: 10vh;
+}
+
+.gambar-rekomen img{
   width: 65px;
   height: 65px;
   border: 2px solid rgba(0, 0, 0, 0.3);
