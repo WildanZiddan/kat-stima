@@ -392,7 +392,7 @@ body{
 \*-----------------------------------*/
 .main-container-rekomen {
   width: 83.5%;
-  height: 100vh;
+  height: 80vh;
   margin: 10vh auto;
   border: 1px solid rgba(0, 0, 0, 0.3);
   background-color: #f5f3f3;
@@ -406,33 +406,44 @@ body{
 
 .container-rekomen {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto;
   gap: 50px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
+  padding: 2vh;
 }
 
 .box-rekomen {
   text-decoration: none;
-  text-align: center;
   color: #000;
   background-color: white;
   font-weight: 500;
-  height: 12vh;
+  height: 30vh;
+  width: 20vh;
 }
-
 .isi-rekomen {
   height: 100%;
-  padding: 0 2vh;
   margin: 0;
-  padding: 10% 0;
-  width: 10vh;
+  width: 100%;
 }
-
 .gambar-rekomen img{
-  width: 65px;
-  height: 65px;
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+  width: 100%;
+  height: 20vh;
+}
+.teks-rekomen {
+  text-align: left;
+  padding: 0 2px;
+}
+.nama-barang {
+  font-size: 14px;
+}
+.harga::before {
+  content: 'Rp';
+  font-size: 10px;
+}
+.harga {
+  margin-top: 2.5vh;
+  font-size: 13px;
+  color: #967E76;
 }
