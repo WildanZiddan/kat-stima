@@ -1,7 +1,6 @@
 $(document).ready(function () {
   var state = false;
 
-  // Function to toggle the responsive menu
   function toggleNav() {
     $("#nav-icon3").toggleClass("open");
     if (!state) {
@@ -13,12 +12,10 @@ $(document).ready(function () {
     }
   }
 
-  // Click event for the hamburger icon
   $("#nav-icon3").click(function () {
     toggleNav();
   });
 
-  // Click event for responsive menu links
   $(".navbar-responsive__link a").click(function () {
     toggleNav();
   });
@@ -47,14 +44,12 @@ function showSlides(n) {
   console.log(slideIndex);
 
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-      // slides[i].style.display = "inline";
+      slides[i].style.display = "none"
   }
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";
-  // slides[slideIndex-1].style.display = "inline";
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex - 1].alt;
 }

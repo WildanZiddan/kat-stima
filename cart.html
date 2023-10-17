@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="CSS/cart.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./JS/cart.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+  <div>
+    <nav>
+    <div class="navbar">
+      <div class="navbar__wrapper">
+        <nav class="navbar__menu"><a class="navbar__brand" href="home.html">
+            <img src="./img/logo.png" alt="" /> Katástima</a>
+          <div id="nav-icon3">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="navbar__nav">
+            <li class="navbar__link after-transform"><a href="#cart"><i class='bx bx-cart-alt'></i></a></li>
+            <li class="navbar__link after-transform"><a href="#notification"><i class='bx bx-bell' ></i></a></li>
+            <li class="navbar__link after-transform"><a href="#mail"><i class='bx bx-envelope' ></i></a></li>
+            <li class="navbar__link after-transform"><a href="#profile"><i class='bx bx-user' ></i></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="nav_r">
+      <ul class="nav_r__nav">
+        <li class="navbar-responsive__link after-transform"><a href="#cart"><i class='bx bx-cart-alt'> Cart</i></a></li>
+        <li class="navbar-responsive__link after-transform"><a href="#notification"><i class='bx bx-bell' > Notification</i></a></li>
+        <li class="navbar-responsive__link after-transform"><a href="#mail"><i class='bx bx-envelope' > Mail</i></a></li>
+        <li class="navbar-responsive__link after-transform"><a href="#profile"><i class='bx bx-user' > Profile</i></a></li>
+      </ul>
+    </div>
+  </nav>
+  </div>
+
+  <!---------- CART ---------->
+<div class="utama">
+    <div class="main-container-cart">
+    <h2>Cart</h2>
+    <div class="container-cart">
+        <div class="box-cart">
+            <div class="isi-cart">
+                <label class="centang">
+                    <input type="checkbox">
+                    <span class="nyala"></span>
+                </label>
+                <div class="gambar-cart"><img src="./img/Perfume.jpeg" alt=""></div>
+                <div class="teks-cart">
+                    <p class="barang">Bleu De Channel perfume</p>
+                    <p class="kategori">Eau De Parfum Spray</p>
+                    <p class="harga"><a id="harga">0</a></p>
+                </div>
+                <div class="jumlah">
+                    <a id="kurang" onclick="kurang()"><i class='bx bx-minus-circle' ></i></a>
+                    <p class="jumlahnya"><a id="clicks">0</a></p>
+                    <a id="tambah" onclick="tambah()"><i class='bx bx-plus-circle' ></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <div class="total">
+        ktosk
+    </div>
+</div>
+  <!---------- FOOTER ---------->
+    <footer class="footer">
+      <div class="footer__addr">
+        <div class="logo-footer">
+          <img src="./img/logo.png" alt="">
+          <p>Katástima</p>
+        </div>
+            
+        <h2>Contact:</h2>
+        
+        <address>
+          Greek street 2, Jakarta, Indonesia. 14260<br>
+              
+          <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+        </address>
+      </div>
+      
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Navbar Menu</h2>
+    
+          <ul class="nav__ul">
+            <li>
+              <a href="cart.html">Cart</a>
+            </li>
+    
+            <li>
+              <a href="#">Notification</a>
+            </li>
+                
+            <li>
+              <a href="#">Mail</a>
+            </li>
+
+            <li>
+              <a href="#">Profile</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav__item">
+          <h2 class="nav__title">Payment Method</h2>
+          
+          <ul class="nav__ul">
+            <li>
+              <a href="#"><img src="./img/Gateway.png" alt=""></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      
+      <div class="legal">
+        <p>&copy; 2023 Something. All rights reserved.</p>
+      </div>
+    </footer>
+</body>
+</html>
