@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="CSS/cart.css">
+    <link rel="stylesheet" href="./CSS/cart.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="./JS/cart.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 <body>
-  <div>
+    <div>
     <nav>
     <div class="navbar">
       <div class="navbar__wrapper">
@@ -26,8 +26,8 @@
           </div>
           <ul class="navbar__nav">
             <li class="navbar__link after-transform"><a href="#cart"><i class='bx bx-cart-alt'></i></a></li>
-            <li class="navbar__link after-transform"><a href="#notification"><i class='bx bx-bell' ></i></a></li>
-            <li class="navbar__link after-transform"><a href="#mail"><i class='bx bx-envelope' ></i></a></li>
+            <li class="navbar__link after-transform"><a onClick="showPopup()"><i class='bx bx-bell' ></i></a></li>
+            <li class="navbar__link after-transform"><a href="mail.html"><i class='bx bx-envelope' ></i></a></li>
             <li class="navbar__link after-transform"><a href="#profile"><i class='bx bx-user' ></i></a></li>
           </ul>
         </nav>
@@ -36,13 +36,16 @@
     <div class="nav_r">
       <ul class="nav_r__nav">
         <li class="navbar-responsive__link after-transform"><a href="#cart"><i class='bx bx-cart-alt'> Cart</i></a></li>
-        <li class="navbar-responsive__link after-transform"><a href="#notification"><i class='bx bx-bell' > Notification</i></a></li>
-        <li class="navbar-responsive__link after-transform"><a href="#mail"><i class='bx bx-envelope' > Mail</i></a></li>
+        <li class="navbar-responsive__link after-transform"><a onClick="showPopup()"><i class='bx bx-bell' > Notification</i></a></li>
+        <li class="navbar-responsive__link after-transform"><a href="mail.html"><i class='bx bx-envelope' > Mail</i></a></li>
         <li class="navbar-responsive__link after-transform"><a href="#profile"><i class='bx bx-user' > Profile</i></a></li>
       </ul>
     </div>
   </nav>
-  </div>
+    </div>
+    <div class="popup">
+        Tomorrow is 10.10 day!
+    </div>
 
   <!---------- CART ---------->
 <div class="utama">
@@ -59,12 +62,31 @@
                 <div class="teks-cart">
                     <p class="barang">Bleu De Channel perfume</p>
                     <p class="kategori">Eau De Parfum Spray</p>
-                    <p class="harga"><a id="harga">0</a></p>
+                    <p class="harga">2.400.000</p>
                 </div>
                 <div class="jumlah">
-                    <a id="kurang" onclick="kurang()"><i class='bx bx-minus-circle' ></i></a>
-                    <p class="jumlahnya"><a id="clicks">0</a></p>
-                    <a id="tambah" onclick="tambah()"><i class='bx bx-plus-circle' ></i></a>
+                    <a id="kurang" onclick="kurangParfum()"><i class='bx bx-minus-circle' ></i></a>
+                    <p class="jumlahnya"><a id="clicksparfum">0</a></p>
+                    <a id="tambah" onclick="tambahParfum()"><i class='bx bx-plus-circle' ></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="box-cart">
+            <div class="isi-cart">
+                <label class="centang">
+                    <input type="checkbox">
+                    <span class="nyala"></span>
+                </label>
+                <div class="gambar-cart"><img src="./img/Toys.jpeg" alt=""></div>
+                <div class="teks-cart">
+                    <p class="barang">Wooden Wheels animal....</p>
+                    <p class="kategori">Giraffe</p>
+                    <p class="harga">33.000</p>
+                </div>
+                <div class="jumlah">
+                    <a id="kurang" onclick="kurangToys()"><i class='bx bx-minus-circle' ></i></a>
+                    <p class="jumlahnya"><a id="clickstoys">0</a></p>
+                    <a id="tambah" onclick="tambahToys()"><i class='bx bx-plus-circle' ></i></a>
                 </div>
             </div>
         </div>
@@ -72,8 +94,15 @@
   </div>
 
     <div class="total">
-        ktosk
+        <div class="container-total">
+            <div class="harga-total">
+                <p class="detail-total">Ringkasan Belanja</p>
+                <p class="harganya"> Total Harga (<a id="barang">0</a> barang) <a id="hargatotal">0</a></p>
+                <input type="button" value="Beli"></input>
+            </div>
+        </div>
     </div>
+    
 </div>
   <!---------- FOOTER ---------->
     <footer class="footer">
@@ -102,11 +131,11 @@
             </li>
     
             <li>
-              <a href="#">Notification</a>
+              <a onClick="showPopup()">Notification</a>
             </li>
                 
             <li>
-              <a href="#">Mail</a>
+              <a href="mail.html">Mail</a>
             </li>
 
             <li>

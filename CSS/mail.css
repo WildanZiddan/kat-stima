@@ -25,6 +25,16 @@
   border: none;
 }
 
+:root {
+    --chat-zIndex: 1000;
+    --chat-min-height: 80vh;
+    --chat-max-height: 90vh;
+    --chat-color-white: #fff;
+    --chat-color-black: #222;
+    --chat-color-primary: #06b7f1;
+    --chat-default-shadow: 0 0 10px 5px rgba(112, 111, 102, 0.23);
+  }
+
 body{
   overflow-x: hidden;
   font-family: 'Inter', sans-serif;
@@ -43,7 +53,7 @@ body{
   transition: transform 0.3s ease-in-out 0.1s;
   box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.25);
   background-color: #967e76;
-  margin-top: -12vh;
+  margin-top: -10vh;
 }
 .navbar__wrapper {
   width: 100%;
@@ -266,195 +276,184 @@ body{
   }
 }
 
-/*-----------------------------------*\
-  .CART
-\*-----------------------------------*/
-.utama {
-    display: flex;
-    height: 50vh;
-    margin: 12vh 0;
+.chat-page-container {
+    margin-top: 10vh;
     width: 100%;
-}
-
-.main-container-cart {
-    width: 45%;
-    padding-left: 15%;
+    height: 100vh;
+    display: flex;
+  }
+  
+  .area-1 {
     flex: 1;
-}  
-.container-cart {
+    max-width: 400px;
+    width: 400px;
+    border-right: 0.2px solid #967E76;
+    padding: 0 7px 0 0;
+  }
+  .list-friend-container{
+    max-width: 800px;
+    font-family: Calibri;
+  }
+  .title-frame {
+    height: 50px;
     display: flex;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    flex-direction: column;
-}
-.box-cart {
-    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.2px solid #967e76;
+  }
+  
+  .search-frame {
+    height: 50px;
     display: flex;
-    color: #000;
-    font-weight: 500;
-    margin-left: -.2px;
-}
-.isi-cart {
-    height: 100%;
-    width: 100%;
-    padding: 5% 0 10% 2px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.2px solid #967e76;
+  }
+  
+  .search-container {
     display: flex;
-    border: 1px solid rgba(0, 0, 0, .5);
-    border-left: 0;
-    border-right: 0;
-} 
-.gambar-cart img{
-    width: 80px;
-    height: 80px;
-    border-radius: 8px;
-}
-
-.teks-cart {
-    height: 100%;
-    margin-left: 1vh;
-}
-
-.centang {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    margin-right: 1vh;
-}
-/* Hide the browser's default checkbox */
-.centang input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-/* Create a custom checkbox */
-.nyala {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    border-radius: 2.5px;
-    margin-top: 75%;
     background-color: #D7C0AE;
-}
-/* On mouse-over, add a grey background color */
-.centang:hover input ~ .nyala {
-    background-color: #D7C0AE;
-}
-/* When the checkbox is checked, add a blue background */
-.centang input:checked ~ .nyala {
-    background-color: #967e76;
-}
-/* Create the nyala/indicator (hidden when not checked) */
-.nyala:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-  /* Show the nyala when checked */
-  .centang input:checked ~ .nyala:after {
-    display: block;
-}  
-  /* Style the nyala/indicator */
-.centang .nyala:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.jumlah {
-    display: flex;
-    margin-top: 8vh;
-}
-
-#kurang, #tambah {
-    cursor: pointer;
-}
-
-.bx {
-    font-size: 20px;
-}
-
-.barang{
-    font-size: 16px;
-}
-.kategori{
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 10px;
+    font-family: Calibri;
+  }
+  .search-input {
+    height: 100%;
+    width: 100%;
+    margin: 0 5px;
     font-size: 14px;
-}
-.harga::before{
-    content: 'Rp';
-    font-size: 16px;
-    font-weight: 600;
-}
-.harga{
-    font-size: 16px;
-    font-weight: 600;
-    margin-top: 2vh;
-}
-
-.total {
+    border: 0;
+    background-color: transparent;
+  }
+  .search-button,.search-input:focus{
+    outline: none;
+  }
+  .search-button {
+    height: 100%;
+    width: 40px;
+    margin: 0 5px;
+    font-size: 14px;
+    border: 0;
+    background-color: transparent;
+    color: #333;
+  }
+  
+  .friend-container {
+    display: flex;
+    align-items: center;
+    max-width: 700px;
+    margin: 5px 0;
+    justify-content: space-between;
+  }
+  .avatar-name {
+    display: flex;
+    align-items: center;
+  }
+  .avatar-frame {
+    height: 64px;
+    width: 64px;
+    background-color: #967E76;
+    border-radius: 50%;
+    margin: 5px;
+  }
+  .name-frame {
+    font-family: Calibri;
+    font-weight: 400;
+    margin: 0 5px;
+  }
+  .status-frame {
+    height: 16px;
+    width: 16px;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 0 5px 0 110px;
+  }
+  .onlined{
+    background-color: green;
+  }
+  
+  .selected {
+    background-color: #D7C0AE;
+    width: 50.75vh;
+  }
+  
+  
+  .area-2 {
+    width: 70vh;
     flex: 1;
-    padding: 4vh 12% 4vh 0;
-}
-
-.container-total {
-    padding: 10px 8px 0;
-    width: 35vh;
-    height: 15vh;
-    background-color: white;
-    border-radius: 10px;
-    -webkit-box-shadow: -3px 5px 46px -12px rgba(0,0,0,0.92);
--moz-box-shadow: -3px 5px 46px -12px rgba(0,0,0,0.92);
-box-shadow: -3px 5px 46px -12px rgba(0,0,0,0.92);
-}
-
-.detail-total {
-    font-size: 18px;
-    font-weight: 600;
+  }
+  
+  .chat-area-container {
+    max-width: 700px;
+    height: 100vh;
+    font-family: Calibri;
+    display: flex;
+    flex-flow: column;
+  }
+  .title-frame {
+    height: 50px;
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .message-frame {
+    width: 145vh;
+    border-bottom: 0.2px solid #967E76;
+    margin-left: -27.8vh;
     margin-bottom: 10px;
-}
-
-.harganya {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-#hargatotal {
-    float: right;
-}
-
-input[type=button] {
-    border: none;
-    width: 100%;
-    height: 4vh;
-    margin-top: 10px;
-    border-radius: 6px;
-    color: rgba(0, 0, 0, .4);
-    font-weight: 600;
-    transition: all .3s;
-}
-input[type=button]:hover {
-    color: #2f2f2f;
+    flex: 1 1 auto;
+    overflow-x: hidden;
+    
+  }
+  .input-chat-frame {
+    flex: 0 1 50px;
+  }
+  
+  .message-frame-left {
+    margin: 5px 10px;
+    display: flex;
+    max-width: 900px;
+  }
+  
+  .message-frame-right {
+    margin: 5px 10px 5px 300px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .text-field {
+    display:inline-block;
+    border-radius: 20px;
+    width: auto;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 10px;
+    color: white;
+    font-family: Calibri;
+    clear: both;
+  }
+  
+  .text-field-left {
     background-color: #D7C0AE;
-}
+    color: black;
+  }
+  
+  .text-field-right {
+     background-color: #967e76;
+  }
+  
+  .avatar {
+    height: 64px;
+    width: 64px;
+    background-color: #D7C0AE;
+    border-radius: 50%;
+    float: left;
+  }
 
-/*-----------------------------------*\
+  /*-----------------------------------*\
   .FOOTER
 \*-----------------------------------*/
 .footer {

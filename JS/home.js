@@ -21,6 +21,15 @@ $(document).ready(function () {
   });
 });
 
+function showPopup() {
+  const popup = document.querySelector(".popup");
+  popup.classList.toggle("active");
+
+  setTimeout(function () {
+      popup.classList.remove("active");
+  }, 2000);
+}
+
 var slideIndex = 1;
 document.addEventListener("DOMContentLoaded", function() {
   showSlides(slideIndex);

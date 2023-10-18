@@ -27,8 +27,8 @@
           </div>
           <ul class="navbar__nav">
             <li class="navbar__link after-transform"><a href="cart.html"><i class='bx bx-cart-alt'></i></a></li>
-            <li class="navbar__link after-transform"><a href="#notification"><i class='bx bx-bell' ></i></a></li>
-            <li class="navbar__link after-transform"><a href="#mail"><i class='bx bx-envelope' ></i></a></li>
+            <li class="navbar__link after-transform"><a onClick="showPopup()"><i class='bx bx-bell' ></i></a></li>
+            <li class="navbar__link after-transform"><a href="mail.html"><i class='bx bx-envelope' ></i></a></li>
             <li class="navbar__link after-transform"><a href="#profile"><i class='bx bx-user' ></i></a></li>
           </ul>
         </nav>
@@ -37,12 +37,15 @@
     <div class="nav_r">
       <ul class="nav_r__nav">
         <li class="navbar-responsive__link after-transform"><a href="cart.html"><i class='bx bx-cart-alt'> Cart</i></a></li>
-        <li class="navbar-responsive__link after-transform"><a href="#notification"><i class='bx bx-bell' > Notification</i></a></li>
-        <li class="navbar-responsive__link after-transform"><a href="#mail"><i class='bx bx-envelope' > Mail</i></a></li>
+        <li class="navbar-responsive__link after-transform"><a onClick="showPopup()"><i class='bx bx-bell' > Notification</i></a></li>
+        <li class="navbar-responsive__link after-transform"><a href="mail.html"><i class='bx bx-envelope' > Mail</i></a></li>
         <li class="navbar-responsive__link after-transform"><a href="#profile"><i class='bx bx-user' > Profile</i></a></li>
       </ul>
     </div>
   </nav>
+  </div>
+  <div class="popup">
+    Tomorrow is 10.10 day!
   </div>
   
     <!---------- NEWS ---------->
@@ -154,7 +157,7 @@
           <div class="isi-rekomen">
             <div class="gambar-rekomen"><img src="./img/Toys.jpeg" alt=""></div>
             <div class="teks-rekomen">
-              <p class="nama-barang">Wooden Wheels animal ver. Giraffe</p>
+              <p class="nama-barang">Wooden Wheels animal version</p>
               <p class="harga">33.000</p>
             </div>
           </div>
@@ -289,11 +292,11 @@
             </li>
     
             <li>
-              <a href="#">Notification</a>
+              <a onClick="showPopup()">Notification</a>
             </li>
                 
             <li>
-              <a href="#">Mail</a>
+              <a href="mail.html">Mail</a>
             </li>
 
             <li>

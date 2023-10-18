@@ -22,19 +22,56 @@ $(".navbar-responsive__link a").click(function () {
     });
 });
 
-var clicks = 0;
-var harga = 0;
-    function tambah() {
-        clicks += 1;
-        harga += 2400000;
-        document.getElementById("clicks").innerHTML = clicks;
-        document.getElementById("harga").innerHTML = harga;
-    };
-    function kurang() {
-        if (clicks > 0) {
-            clicks -= 1;
-            harga -= 2400000;
-            document.getElementById("clicks").innerHTML = clicks;
-            document.getElementById("harga").innerHTML = harga;
-        }    
+function showPopup() {
+    const popup = document.querySelector(".popup");
+    popup.classList.toggle("active");
+
+    setTimeout(function () {
+        popup.classList.remove("active");
+    }, 2000);
+}
+
+//<---------- Harga ---------->\\
+var clicksparfum = 0;
+var clickstoys = 0;
+var hargatotal = 0;
+var barang = 0;
+
+function tambahParfum() {
+    clicksparfum += 1;
+    barang += 1;
+    hargatotal += 2400000;
+    document.getElementById("clicksparfum").innerHTML = clicksparfum;
+    document.getElementById("hargatotal").innerHTML = hargatotal;
+    document.getElementById("barang").innerHTML = barang;
+};
+function kurangParfum() {
+    if (clicksparfum > 0) {
+        clicksparfum -= 1;
+        barang -= 1;
+        hargatotal -= 2400000;
+        document.getElementById("clicksparfum").innerHTML = clicksparfum;
+        document.getElementById("hargatotal").innerHTML = hargatotal;
+        document.getElementById("barang").innerHTML = barang;
+    }    
+}
+
+function tambahToys() {
+    clickstoys += 1;
+    barang += 1;
+    hargatotal += 33000;
+    document.getElementById("clickstoys").innerHTML = clickstoys;
+    document.getElementById("hargatotal").innerHTML = hargatotal;
+    document.getElementById("barang").innerHTML = barang;
+};
+function kurangToys() {
+    if (clickstoys > 0) {
+        clickstoys -= 1;
+        barang -= 1;
+        hargatotal -= 33000;
+        document.getElementById("clickstoys").innerHTML = clickstoys;
+        document.getElementById("hargatotal").innerHTML = hargatotal;
+        document.getElementById("barang").innerHTML = barang;
     }
+}
+//<----------=---------->\\
