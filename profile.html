@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./CSS/profile.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./JS/profile.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+<body>
+    <div>
+        <nav>
+        <div class="navbar">
+          <div class="navbar__wrapper">
+            <nav class="navbar__menu"><a class="navbar__brand" href="home.html">
+                <img src="./img/logo.png" alt="" /> Katástima</a>
+              <div id="nav-icon3">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <ul class="navbar__nav">
+                <li class="navbar__link after-transform"><a href="cart.html"><i class='bx bx-cart-alt'></i></a></li>
+                <li class="navbar__link after-transform"><a onClick="showPopup()"><i class='bx bx-bell' ></i></a></li>
+                <li class="navbar__link after-transform"><a href="mail.html"><i class='bx bx-envelope' ></i></a></li>
+                <li class="navbar__link after-transform"><a href="profile.html"><i class='bx bx-user' ></i></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="nav_r">
+          <ul class="nav_r__nav">
+            <li class="navbar-responsive__link after-transform"><a href="cart.html"><i class='bx bx-cart-alt'> Cart</i></a></li>
+            <li class="navbar-responsive__link after-transform"><a onClick="showPopup()"><i class='bx bx-bell' > Notification</i></a></li>
+            <li class="navbar-responsive__link after-transform"><a href="mail.html"><i class='bx bx-envelope' > Mail</i></a></li>
+            <li class="navbar-responsive__link after-transform"><a href="profile.html"><i class='bx bx-user' > Profile</i></a></li>
+          </ul>
+        </div>
+      </nav>
+        </div>
+        <div class="popup">
+            Tomorrow is 10.10 day!
+        </div>
+
+    <!-- Sidenav -->
+    <div class="sidenav">
+        <div class="profile">
+            <img src="https://imdezcode.files.wordpress.com/2020/02/imdezcode-logo.png" alt="" width="100" height="100">
+
+            <div class="name">
+                wildan284
+            </div>
+            <div class="job">
+                Wildan Yazid Ziddan
+            </div>
+        </div>  
+    </div>
+    <!-- End -->
+
+    <!-- Main -->   
+    <div class="main">
+        <div class="card">
+            <div class="card-body">
+                <i class="fa fa-pen fa-xs edit"></i>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td>:</td>
+                            <td>Wildan Yazid Ziddan</td>
+                        </tr>
+                        <tr>
+                            <td>Username</td>
+                            <td>:</td>
+                            <td>wildan284</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>:</td>
+                            <td>wildanyazidziddan284@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>:</td>
+                            <td>Komp Pertamina Semper Statue X/6, Jakarta</td>
+                        </tr>
+                        <tr>
+                            <td>Phone Number</td>
+                            <td>:</td>
+                            <td>0812 3456 7891</td>
+                        </tr>
+                        <tr>
+                            <td>Postcode</td>
+                            <td>:</td>
+                            <td>14260</td>
+                        </tr>
+                        <tr>
+                            <td>Bank Account</td>
+                            <td>:</td>
+                            <td>Indonesian Bank</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+                <!---------- FOOTER ---------->
+                <footer class="footer">
+                    <div class="footer__addr">
+                      <div class="logo-footer">
+                        <img src="./img/logo.png" alt="">
+                        <p>Katástima</p>
+                      </div>
+                          
+                      <h2>Contact:</h2>
+                      
+                      <address>
+                        Greek street 2, Jakarta, Indonesia. 14260<br>
+                            
+                        <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+                      </address>
+                    </div>
+                    
+                    <ul class="footer__nav">
+                      <li class="nav__item">
+                        <h2 class="nav__title">Navbar Menu</h2>
+                  
+                        <ul class="nav__ul">
+                          <li>
+                            <a href="cart.html">Cart</a>
+                          </li>
+                  
+                          <li>
+                            <a onClick="showPopup()">Notification</a>
+                          </li>
+                              
+                          <li>
+                            <a href="mail.html">Mail</a>
+                          </li>
+              
+                          <li>
+                            <a href="profile.html">Profile</a>
+                          </li>
+                        </ul>
+                      </li>
+                      
+                      <li class="nav__item">
+                        <h2 class="nav__title">Payment Method</h2>
+                        
+                        <ul class="nav__ul">
+                          <li>
+                            <a href="#"><img src="./img/Gateway.png" alt=""></a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    
+                    <div class="legal">
+                      <p>&copy; 2023 Something. All rights reserved.</p>
+                    </div>
+                  </footer>
+</body>
+</html>

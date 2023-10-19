@@ -53,7 +53,6 @@ body{
   transition: transform 0.3s ease-in-out 0.1s;
   box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.25);
   background-color: #967e76;
-  margin-top: -10vh;
 }
 .navbar__wrapper {
   width: 100%;
@@ -276,185 +275,79 @@ body{
   }
 }
 
-.chat-page-container {
-    margin-top: 10vh;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-  }
-  
-  .area-1 {
-    flex: 1;
-    max-width: 400px;
-    width: 400px;
-    border-right: 0.2px solid #967E76;
-    padding: 0 7px 0 0;
-  }
-  .list-friend-container{
-    max-width: 800px;
-    font-family: Calibri;
-  }
-  .title-frame {
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 0.2px solid #967e76;
-  }
-  
-  .search-frame {
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 0.2px solid #967e76;
-  }
-  
-  .search-container {
-    display: flex;
+/* Sidenav */
+.sidenav {
     background-color: #D7C0AE;
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-    padding: 10px;
-    font-family: Calibri;
-  }
-  .search-input {
-    height: 100%;
-    width: 100%;
-    margin: 0 5px;
-    font-size: 14px;
-    border: 0;
-    background-color: transparent;
-  }
-  .search-button,.search-input:focus{
-    outline: none;
-  }
-  .search-button {
-    height: 100%;
-    width: 40px;
-    margin: 0 5px;
-    font-size: 14px;
-    border: 0;
-    background-color: transparent;
     color: #333;
-  }
-  
-  .friend-container {
-    display: flex;
-    align-items: center;
-    max-width: 700px;
-    margin: 5px 0;
-    justify-content: space-between;
-  }
-  .avatar-name {
-    display: flex;
-    align-items: center;
-  }
-  .avatar-frame {
-    height: 64px;
-    width: 64px;
-    background-color: #967E76;
-    border-radius: 50%;
-    margin: 5px;
-  }
-  .name-frame {
-    font-family: Calibri;
-    font-weight: 400;
-    margin: 0 5px;
-  }
-  .status-frame {
-    height: 16px;
-    width: 16px;
-    background-color: gray;
-    border-radius: 50%;
-    margin: 0 5px 0 110px;
-  }
-  .onlined{
-    background-color: green;
-  }
-  
-  .selected {
-    background-color: #D7C0AE;
-    width: 50.75vh;
-  }
-  
-  
-  .area-2 {
-    width: 70vh;
-    flex: 1;
-  }
-  
-  .chat-area-container {
-    max-width: 700px;
-    height: 100vh;
-    font-family: Calibri;
-    display: flex;
-    flex-flow: column;
-  }
-  .title-frame {
-    height: 50px;
-    flex: 0 1 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .message-frame {
-    width: 145vh;
-    border-bottom: 0.2px solid #967E76;
-    margin-left: -27.8vh;
-    margin-bottom: 10px;
-    flex: 1 1 auto;
+    height: 91vh;
+    left: 0;
     overflow-x: hidden;
-    
-  }
-  .input-chat-frame {
-    flex: 0 1 50px;
-    width: 100vh;
-  }
-  
-  .message-frame-left {
-    margin: 5px 10px;
-    display: flex;
-    max-width: 900px;
-  }
-  
-  .message-frame-right {
-    margin: 5px 10px 5px 300px;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .text-field {
-    display:inline-block;
-    border-radius: 20px;
-    width: auto;
-    max-width: 800px;
-    padding: 10px;
-    margin: 0 10px;
-    color: white;
-    font-family: Calibri;
-    clear: both;
-  }
-  
-  .text-field-left {
-    background-color: #D7C0AE;
-    color: black;
-  }
-  
-  .text-field-right {
-     background-color: #967e76;
-  }
-  
-  .avatar {
-    height: 64px;
-    width: 64px;
-    background-color: #D7C0AE;
-    border-radius: 50%;
-    float: left;
-  }
+    padding-top: 20px;
+    position: absolute;
+    top: 70px;
+    width: 250px;
+    border-right: 2px solid #967E76;
+}
 
-  /*-----------------------------------*\
+.profile {
+    margin-bottom: 20px;
+    margin-top: 2vh;
+    text-align: center;
+}
+
+.profile img {
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 1px grey;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.job {
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+/* End */
+
+/* Main */
+.main {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(215, 192, 174, .5);
+    padding-top: 30vh;
+}
+
+.main .card {
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 1px 1px 8px 0 grey;
+    height: auto;
+    padding: 20px 0 20px 50px;
+    margin-left: 29%;
+    font-size: 28px;
+    padding: 0 10px;
+    width: 58%;
+}
+
+.main .card table {
+    border: none;
+    font-size: 16px;
+    height: 270px;
+    width: 80%;
+}
+
+.edit {
+    position: absolute;
+    color: #e7e7e8;
+    right: 14%;
+}
+
+ /*-----------------------------------*\
   .FOOTER
 \*-----------------------------------*/
 .footer {
